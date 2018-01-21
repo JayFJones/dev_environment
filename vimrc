@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype plugin indent on                 " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -31,9 +31,31 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+set shiftwidth=4 tabstop=4 expandtab
+set wrap
+set linebreak
+
+set textwidth=0
+set wrapmargin=0
+
+set nobackup
+set nowritebackup
+set noswapfile
+
+set autowrite
+
 
 " Here are my keyboard mappings
 map <F2>  :NERDTreeToggle<CR>
+:nnoremap <F10> :buffers<CR>:buffers<Space>
 map <F11> :bprevious<CR>
 map <F12> :bnext<CR>
+
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
